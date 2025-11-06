@@ -7,3 +7,22 @@ if num_participants <= 0:
     print("Invalid number of participants")
 else:
     participants = num_participants
+
+participants = []
+
+for i in range(num_participants):
+    print(f"\nEntering details for participant {i + 1}:")
+    name = input("Enter participant name: ")
+    track = input("Enter chosen track: ")
+
+
+    participant = {
+        "name": name,
+        "track": track
+    }
+    participants.append(participant)
+
+print("\nRegistered Participants:")
+for i in range(len(participants)):
+    participant = participants[i]
+    print(f"{i + 1}. {participant['name']} - {participant['track']}")
